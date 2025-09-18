@@ -9,13 +9,13 @@ const HeroPage = () => {
   }, []);
 
   return (
-    <div className="relative bg-gradient-to-br from-gray-900 via-black to-gray-800 min-h-screen flex items-center overflow-hidden">
-      {/* Animated background elements */}
+    <div className="relative bg-gradient-to-b from-black via-gray-900 to-black min-h-screen flex items-center overflow-hidden">
+      {/* Consistent animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-amber-400/10 to-yellow-300/5 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-yellow-500/8 to-amber-400/10 rounded-full blur-3xl animate-float-delayed"></div>
-        <div className="absolute top-20 left-20 w-2 h-2 bg-amber-400 rounded-full animate-ping opacity-60"></div>
-        <div className="absolute bottom-32 right-32 w-1 h-1 bg-yellow-300 rounded-full animate-ping delay-1000 opacity-80"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-amber-400/8 to-yellow-300/8 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-l from-yellow-300/6 to-amber-600/6 rounded-full blur-3xl animate-pulse-slow delay-1000"></div>
+        <div className="absolute top-10 right-10 w-2 h-2 bg-amber-400 rounded-full animate-ping opacity-60"></div>
+        <div className="absolute bottom-20 left-20 w-1 h-1 bg-yellow-300 rounded-full animate-ping delay-500 opacity-80"></div>
       </div>
 
       {/* Grid pattern overlay */}
@@ -36,8 +36,8 @@ const HeroPage = () => {
               AI-Powered Legal Analysis
             </div>
 
-            {/* Main Headline with enhanced animation */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.9] mb-8 tracking-tight">
+            {/* Main Headline with consistent sizing */}
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.9] mb-8 tracking-tight">
               <span className="block bg-gradient-to-r from-white via-amber-100 to-white bg-clip-text text-transparent mb-2">
                 Contracts
               </span>
@@ -82,57 +82,69 @@ const HeroPage = () => {
             </div>
 
             {/* Trust indicators */}
-            
+            {/* <div className="flex flex-wrap justify-center lg:justify-start items-center gap-6 text-gray-500 text-sm">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span>99.9% Uptime</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                </svg>
+                <span>Bank-Level Security</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <span>4.9/5 Rating</span>
+              </div>
+            </div> */}
           </div>
 
-          {/* Right Column: Enhanced Video/Visual */}
+          {/* Right Column: Consistent Video/Visual */}
           <div className={`flex justify-center lg:justify-end transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-  <div className="relative">
-    {/* Outer glow ring */}
-    <div className="absolute inset-0 w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] rounded-full bg-gradient-to-r from-amber-400/20 to-yellow-300/20 blur-xl animate-glow"></div>
-    
-    {/* Middle ring */}
-    <div className="absolute inset-4 rounded-full bg-gradient-to-r from-amber-500/30 to-yellow-400/30 animate-pulse-slow"></div>
-    
-    {/* Video container with enhanced effects */}
-    <div className="relative">
-      <video
-        className="w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] rounded-full object-cover border-4 border-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 shadow-2xl shadow-amber-500/20 relative z-10"
-        src="/asset-63e44766.mp4" 
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        Your browser does not support the video tag.
-      </video>
-      
-      {/* Floating UI elements */}
-      <div className="absolute top-8 -left-4 bg-black/80 backdrop-blur-sm border border-amber-400/30 rounded-lg p-3 animate-float z-20">
-        <div className="flex items-center gap-2 text-sm text-amber-400">
-          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-          <span>AI Analyzing...</span>
-        </div>
-      </div>
-      
-      {/* Corrected "Contract Risks" element with higher z-index and moved further right */}
-      <div className="absolute bottom-12 -right-12 bg-black/80 backdrop-blur-sm border border-yellow-400/30 rounded-lg p-3 animate-float-delayed z-20">
-        <div className="text-xs text-yellow-400">
-          <div className="font-semibold">Contract Risks</div>
-          <div className="text-gray-400">3 found, 2 resolved</div>
-        </div>
-      </div>
-      
-      {/* Corrected "Confidence" element with higher z-index and moved further right */}
-      <div className="absolute top-1/2 -right-16 bg-black/80 backdrop-blur-sm border border-amber-300/30 rounded-lg p-3 animate-bounce-slow z-20">
-        <div className="text-xs text-amber-300">
-          <div className="font-semibold">Confidence</div>
-          <div className="text-gray-400">98.5%</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+            <div className="relative">
+              {/* Consistent glow effects */}
+              <div className="absolute inset-0 w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] rounded-full bg-gradient-to-r from-amber-400/20 to-yellow-300/20 blur-xl animate-pulse-slow"></div>
+              
+              {/* Video container with consistent styling */}
+              <div className="relative">
+                <video
+                  className="w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] rounded-full object-cover border-4 border-amber-400/50 shadow-2xl shadow-amber-500/20 relative z-10"
+                  src="/asset-63e44766.mp4" 
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  Your browser does not support the video tag.
+                </video>
+                
+                {/* Simplified floating UI elements */}
+                <div className="absolute top-8 -left-4 bg-gray-800/80 backdrop-blur-sm border border-amber-400/30 rounded-lg p-3 animate-pulse-slow z-20">
+                  <div className="flex items-center gap-2 text-sm text-amber-400">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span>AI Analyzing...</span>
+                  </div>
+                </div>
+                
+                <div className="absolute bottom-12 -right-8 bg-gray-800/80 backdrop-blur-sm border border-yellow-400/30 rounded-lg p-3 animate-pulse-slow delay-1000 z-20">
+                  <div className="text-xs text-yellow-400">
+                    <div className="font-semibold">Risks Analysis</div>
+                    <div className="text-gray-400">3 found, 2 resolved</div>
+                  </div>
+                </div>
+                
+                <div className="absolute top-1/2 -right-12 bg-gray-800/80 backdrop-blur-sm border border-amber-300/30 rounded-lg p-3 animate-pulse-slow delay-500 z-20">
+                  <div className="text-xs text-amber-300">
+                    <div className="font-semibold">Data Security</div>
+                    <div className="text-gray-400">100% Protected</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Scroll indicator */}
@@ -147,50 +159,14 @@ const HeroPage = () => {
       </main>
 
       <style>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          25% { transform: translateY(-10px) rotate(1deg); }
-          50% { transform: translateY(-5px) rotate(0deg); }
-          75% { transform: translateY(-15px) rotate(-1deg); }
-        }
-        
-        @keyframes float-delayed {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          25% { transform: translateY(-15px) rotate(-1deg); }
-          50% { transform: translateY(-10px) rotate(0deg); }
-          75% { transform: translateY(-5px) rotate(1deg); }
-        }
-        
-        @keyframes glow {
-          0%, 100% { 
-            transform: scale(1);
-            opacity: 0.5;
-          }
-          50% { 
-            transform: scale(1.05);
-            opacity: 0.8;
-          }
-        }
-        
         @keyframes pulse-slow {
-          0%, 100% {
-            box-shadow: 0 0 30px rgba(245, 158, 11, 0.3), 0 0 60px rgba(251, 191, 36, 0.1);
-          }
-          50% {
-            box-shadow: 0 0 40px rgba(245, 158, 11, 0.5), 0 0 80px rgba(251, 191, 36, 0.2);
-          }
+          0%, 100% { opacity: 0.4; }
+          50% { opacity: 0.8; }
         }
         
-        @keyframes bounce-slow {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
+        .animate-pulse-slow {
+          animation: pulse-slow 4s ease-in-out infinite;
         }
-        
-        .animate-float { animation: float 6s ease-in-out infinite; }
-        .animate-float-delayed { animation: float-delayed 8s ease-in-out infinite; }
-        .animate-glow { animation: glow 4s ease-in-out infinite; }
-        .animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
-        .animate-bounce-slow { animation: bounce-slow 3s ease-in-out infinite; }
         
         .bg-grid-pattern {
           background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);

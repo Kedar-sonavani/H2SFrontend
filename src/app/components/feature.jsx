@@ -115,7 +115,7 @@ const FeaturesPage = () => {
                         </p>
 
                         {/* Stats bar */}
-                        <div className="flex flex-wrap justify-center items-center gap-8 text-gray-400 text-sm mb-16">
+                        {/* <div className="flex flex-wrap justify-center items-center gap-8 text-gray-400 text-sm mb-16">
                             <div className="flex items-center gap-2">
                                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                                 <span>10,000+ Documents Analyzed</span>
@@ -128,7 +128,7 @@ const FeaturesPage = () => {
                                 <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-700"></div>
                                 <span>99.9% Uptime Guaranteed</span>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Enhanced Features Grid */}
