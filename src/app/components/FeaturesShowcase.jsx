@@ -112,7 +112,7 @@ const FeaturesShowcase = () => {
 <div
   key={index}
   data-index={index}
-  className={`feature-item relative grid grid-cols-1 lg:grid-cols-2 gap-10 items-center transition-all duration-1000 max-w-10xl mx-auto px-6 py-10 rounded-2xl bg-slate-800/40 backdrop-blur-md border border-slate-700/50 shadow-xl ${
+  className={`feature-item relative grid grid-cols-1 lg:grid-cols-2 gap-10 items-center transition-all duration-1000 max-w-8xl mx-auto px-6 py-10 rounded-2xl bg-slate-800/40 backdrop-blur-md border border-slate-700/50 shadow-xl ${
     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
   }`}
 >
@@ -170,3 +170,4 @@ const FeaturesShowcase = () => {
 };
 
 export default FeaturesShowcase;
+
