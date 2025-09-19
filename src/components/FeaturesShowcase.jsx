@@ -118,7 +118,7 @@ const FeaturesShowcase = () => {
 >
   {/* Image Column */}
   <div className={`relative group ${isOdd ? 'lg:order-2' : ''}`}>
-    <div className="absolute -inset-4 bg-gradient-to-r from-slate-700/50 to-blue-600/30 rounded-2xl blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-300"></div>
+    <div className="absolute -inset-4 bg-gradient-to-b from-black via-gray-900 to-black rounded-2xl blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-300"></div>
     <img 
       src={feature.image} 
       alt={feature.title} 

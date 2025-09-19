@@ -1,16 +1,13 @@
-import Navbar from './components/navbar';
-import HeroSection from './components/hero-section';
-import FeaturesSection from './components/feature';
-import IntroductionSection from './components/IntroductionSection';
-// import Testimonials from './components/Testimonials';
-import FeaturesShowcase from './components/FeaturesShowcase';
-// import TestimonialsSection from './components/TestimonialsSection';
-import Footer from './components/footer';
+// 1. Correct import paths using the standard Next.js '@/' alias
+import Navbar from '@/components/Navbar';
+import HeroSection from '@/components/Hero-section';
+import FeaturesSection from '@/components/Feature';
+import IntroductionSection from '@/components/IntroductionSection';
+import FeaturesShowcase from '@/components/FeaturesShowcase'; // Assuming you have this component
+import Footer from '@/components/Footer';
 
-// This component assumes Tailwind CSS is set up in your React project.
-// You can add the Inter font in your main CSS file or index.html.
-
-const App = () => {
+// 2. Renamed component to be more descriptive (best practice)
+const LandingPage = () => {
     return (
         <div className="bg-black" style={{ fontFamily: "'Inter', sans-serif" }}>
             <Navbar />
@@ -19,11 +16,11 @@ const App = () => {
                 <FeaturesSection />
                 <FeaturesShowcase />
                 <IntroductionSection />
-                {/* <Testimonials /> */}
+                {/* <Testimonials />  */}
             </main>
             <Footer />
         </div>
     );
 };
 
-export default App;
+export default LandingPage;

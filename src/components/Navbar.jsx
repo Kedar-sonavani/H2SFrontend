@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import Link from 'next/link';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -104,9 +105,11 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-full p-1 shadow-lg">
-            <button className="group relative bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
-              Launch App
-            </button>
+             <Link href="/app?mode=upload">
+                  <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Launch App
+                  </button>
+                </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -204,9 +207,11 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="pt-4 border-t border-slate-700/50">
-                <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  Launch App
-                </button>
+                <Link href="/app?mode=upload">
+                  <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Launch App
+                  </button>
+                </Link>
               </li>
             </ul>
           </div>

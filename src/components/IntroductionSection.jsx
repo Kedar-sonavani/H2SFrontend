@@ -100,7 +100,7 @@ const IntroductionSection = () => {
                     Upload contracts and policies for AI-powered analysis with 
                     <span className="text-white font-semibold"> enterprise-grade security</span> and instant PII sanitization.
                 </p>
-                <Link href="/app" className="block mt-auto">
+                <Link href="/app?mode=upload" className="block mt-auto">
                     <button className="relative w-full bg-slate-700 hover:bg-slate-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-slate-600/25 overflow-hidden group/btn">
                     <span className="relative z-10 flex items-center justify-center gap-3">
                         <svg className="w-5 h-5 group-hover/btn:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -138,7 +138,7 @@ const IntroductionSection = () => {
                 Receive clear, verifiable insights with 
                 <span className="text-blue-400 font-semibold"> cited sources</span> instantly.
               </p>
-              <Link href="/app" className="block mt-auto">
+              <Link href="/app?mode=chat" className="block mt-auto">
                 <button className="relative w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 overflow-hidden group/btn">
                   <span className="relative z-10 flex items-center justify-center gap-3">
                     <svg className="w-5 h-5 group-hover/btn:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
