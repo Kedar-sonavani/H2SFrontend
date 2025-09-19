@@ -6,9 +6,9 @@ import ChatPage from '@/components/ChatPage';
 
 export default function AppPage() {
   return (
-    <div>
-      <ChatPage />
-    </div>
+    <Suspense fallback={<div className="text-white">Loading...</div>}>
+      <ChatPageContent />
+    </Suspense>
   );
 }
 
