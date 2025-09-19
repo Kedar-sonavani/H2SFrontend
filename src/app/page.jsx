@@ -2,6 +2,8 @@ import Navbar from './components/navbar';
 import HeroSection from './components/hero-section';
 import FeaturesSection from './components/feature';
 import IntroductionSection from './components/IntroductionSection';
+// import Testimonials from './components/Testimonials';
+import FeaturesShowcase from './components/FeaturesShowcase';
 // import TestimonialsSection from './components/TestimonialsSection';
 import Footer from './components/footer';
 
@@ -15,7 +17,9 @@ const App = () => {
             <main>
                 <HeroSection />
                 <FeaturesSection />
+                <FeaturesShowcase />
                 <IntroductionSection />
+                {/* <Testimonials /> */}
             </main>
             <Footer />
         </div>
