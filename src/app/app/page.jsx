@@ -1,14 +1,6 @@
-"use client";
-import { Suspense } from "react";
-// Ensure component imports use PascalCase to match their filenames and exports.
-import ChatPage from '@/components/ChatPage';
+import ChatPageContent from "@/components/ChatPage";
 
-
-export default function AppPage() {
-  return (
-    <Suspense fallback={<div className="text-white">Loading...</div>}>
-      <ChatPageContent />
-    </Suspense>
-  );
+export default function AppPage({ searchParams }) {
+  const initialMode = searchParams.mode === "upload" ? "upload" : "chat";
+  return <ChatPageContent initialMode={initialMode} />;
 }
-
