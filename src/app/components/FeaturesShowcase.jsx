@@ -109,69 +109,43 @@ const FeaturesShowcase = () => {
             const isOdd = index % 2 !== 0;
 
             return (
-              <div
-                key={index}
-                data-index={index}
-                className={`feature-item grid grid-cols-1 lg:grid-cols-2 gap-12 items-center transition-all duration-1000 ${
-                  isVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-10"
-                }`}
-              >
-                {/* Image Column */}
-                <div
-                  className={`relative group transform transition-transform duration-500 hover:scale-[1.02] ${
-                    isOdd ? "lg:order-2" : ""
-                  }`}
-                >
-                  <div className="absolute -inset-4 bg-gradient-to-r from-slate-700/40 to-blue-600/30 rounded-2xl blur-2xl opacity-40 group-hover:opacity-70 transition-opacity duration-300"></div>
-                  <img
-                    src={feature.image}
-                    alt={feature.title}
-                    className="relative rounded-xl shadow-2xl w-full"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src =
-                        "https://placehold.co/600x400/0f172a/94a3b8?text=Image+Not+Found";
-                    }}
-                  />
-                </div>
+<div
+  key={index}
+  data-index={index}
+  className={`feature-item relative grid grid-cols-1 lg:grid-cols-2 gap-10 items-center transition-all duration-1000 max-w-10xl mx-auto px-6 py-10 rounded-2xl bg-slate-800/40 backdrop-blur-md border border-slate-700/50 shadow-xl ${
+    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+  }`}
+>
+  {/* Image Column */}
+  <div className={`relative group ${isOdd ? 'lg:order-2' : ''}`}>
+    <div className="absolute -inset-4 bg-gradient-to-r from-slate-700/50 to-blue-600/30 rounded-2xl blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-300"></div>
+    <img 
+      src={feature.image} 
+      alt={feature.title} 
+      className="relative rounded-lg shadow-2xl w-full h-72 object-cover"
+      onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/600x400/0f172a/94a3b8?text=Image+Not+Found'; }}
+    />
+  </div>
 
-                {/* Text Column */}
-                <div
-                  className={`text-center lg:text-left ${
-                    isOdd ? "lg:order-1" : ""
-                  }`}
-                >
-                  <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent mb-4">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-400 text-lg mb-6 leading-relaxed">
-                    {feature.description}
-                  </p>
-                  <ul className="space-y-3">
-                    {feature.points.map((point, pIndex) => (
-                      <li
-                        key={pIndex}
-                        className="flex items-center gap-3 text-slate-300"
-                      >
-                        <svg
-                          className="w-5 h-5 text-blue-400 flex-shrink-0"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+  {/* Text Column */}
+  <div className={`text-center lg:text-left ${isOdd ? 'lg:order-1' : ''}`}>
+    <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent mb-4">
+      {feature.title}
+    </h3>
+    <p className="text-gray-400 text-base mb-6">{feature.description}</p>
+    <ul className="space-y-2">
+      {feature.points.map((point, pIndex) => (
+        <li key={pIndex} className="flex items-center gap-3 text-slate-300 text-sm">
+          <svg className="w-5 h-5 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+          </svg>
+          <span>{point}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+
             );
           })}
         </div>
