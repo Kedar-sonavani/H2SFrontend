@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import { Suspense } from "react";
 // Ensure component imports use PascalCase to match their filenames and exports.
 import ChatPage from '@/components/ChatPage';
 
