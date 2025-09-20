@@ -46,7 +46,7 @@ const IntroductionSection = () => {
   }, []);
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-black via-gray-900 to-black text-white overflow-hidden" style={{ fontFamily: "'Poppins', sans-serif" }}>
+    <section className="relative py-24 bg-gradient-to-b text-white overflow-hidden" style={{ fontFamily: "'Poppins', sans-serif" }}>
       
       {/* Enhanced animated background elements with Parallax */}
       <div className="absolute inset-0">
