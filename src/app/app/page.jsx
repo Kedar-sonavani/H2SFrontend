@@ -9,10 +9,14 @@ export default function AppPage({ searchParams }) {
   const initialMode = searchParams.mode === "upload" ? "upload" : "chat";
 
   return (
-    <div>
-      <Navbar />
-      {/* Pass the determined mode to the ChatPage component */}
-      <ChatPage initialMode={initialMode} />
+    <div className="relative min-h-screen bg-slate-900" style={{ fontFamily: "'Poppins', sans-serif" }}>
+       <Navbar hideLaunchButton={true} />
+    
+      <main >
+        {/* Pass the determined mode to the ChatPage component */}
+        <ChatPage initialMode={initialMode} />
+      </main>
     </div>
   );
 }
+
